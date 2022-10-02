@@ -1,0 +1,350 @@
+<section class="calc calc-tab" id="calc">
+  <div class="container">
+    <div class="calc__top">
+      <h2 class="calc__title">
+        Заработать <img src="img/limon.png" alt="limon" /> с нами - просто!
+      </h2>
+      <p class="calc__text">
+        Заведите заявку и получите деньги на следующий день, после выпуска
+        гарантии или кредита.
+      </p>
+      <div class="calc__btns">
+        <button class="calc__btn btn calc-tab-btn active" type="button">
+          ГАРАНТИЙ
+        </button>
+        <button class="calc__btn btn calc-tab-btn" type="button">
+          КРЕДИТЫ
+        </button>
+      </div>
+    </div>
+
+    <div class="calc__content calc-tab-content active">
+      <form class="calc-form">
+        <div class="calc-form__inner">
+          <div class="calc-form__left">
+            <div class="calc-form__title">Информация о контракте:</div>
+
+            <div class="calc-form__btns">
+              <label class="checkbox-btn">
+                <input
+                  class="checkbox-btn__input"
+                  type="radio"
+                  name="contract-info"
+                  checked
+                />
+                <span class="checkbox-btn__text">44-ФЗ</span>
+              </label>
+              <label class="checkbox-btn">
+                <input
+                  class="checkbox-btn__input"
+                  type="radio"
+                  name="contract-info"
+                />
+                <span class="checkbox-btn__text">223-ФЗ</span>
+              </label>
+              <label class="checkbox-btn">
+                <input
+                  class="checkbox-btn__input"
+                  type="radio"
+                  name="contract-info"
+                />
+                <span class="checkbox-btn__text">615-П</span>
+              </label>
+              <label class="checkbox-btn">
+                <input
+                  class="checkbox-btn__input"
+                  type="radio"
+                  name="contract-info"
+                />
+                <span class="checkbox-btn__text">ПРОЧЕЕ</span>
+              </label>
+            </div>
+
+            <select class="calc-form__select select">
+              <option>Цель гарантии</option>
+              <option value="1">Участие в конкурсе</option>
+              <option value="2">Исполнение контракта</option>
+              <option value="3">Гарантийний период аванса</option>
+            </select>
+
+            <label class="calc-form__group">
+              <input
+                class="calc-form__input"
+                type="number"
+                placeholder="Сумма гарантии"
+                required
+              />
+            </label>
+
+            <div class="calc-form__title mt-35">Срок гарантии:</div>
+
+            <div class="calc-form__date">
+              <label class="calc-form__group">
+                <input
+                  class="calc-form__input"
+                  type="number"
+                  placeholder="В днях"
+                  required
+                />
+              </label>
+              <span>или</span>
+              <label class="calc-form__group">
+                <input
+                  class="calc-form__input input-date"
+                  type="text"
+                  placeholder="дд/мм/гггг"
+                  required
+                />
+              </label>
+              <span>—</span>
+              <label class="calc-form__group">
+                <input
+                  class="calc-form__input input-date"
+                  type="text"
+                  placeholder="дд/мм/гггг"
+                  required
+                />
+              </label>
+            </div>
+
+            <button class="calc-form__btn btn calc-income" type="button">
+              РАССЧИТАТЬ ДОХОД ОТ СДЕЛКИ
+            </button>
+          </div>
+          <div class="calc-form__right">
+            <div class="calc-form__slider swiper">
+              <ul class="calc-form__slides swiper-wrapper">
+                <li class="calc-form__slide swiper-slide">
+                  <img src="img/calc-imgs/default.png" alt="img" />
+                </li>
+                <li class="calc-form__slide swiper-slide">
+                  <img src="img/calc-imgs/guarantee/1.png" alt="img" />
+                </li>
+                <li class="calc-form__slide swiper-slide">
+                  <img src="img/calc-imgs/guarantee/2.png" alt="img" />
+                </li>
+                <li class="calc-form__slide swiper-slide">
+                  <img src="img/calc-imgs/guarantee/3.png" alt="img" />
+                </li>
+                <li class="calc-form__slide swiper-slide">
+                  <img src="img/calc-imgs/guarantee/4.png" alt="img" />
+                </li>
+                <li class="calc-form__slide swiper-slide">
+                  <img src="img/calc-imgs/guarantee/5.png" alt="img" />
+                </li>
+              </ul>
+
+              <button
+                class="swiper-button-next"
+                type="button"
+                aria-label="Следующий"
+              ></button>
+              <button
+                class="swiper-button-prev"
+                type="button"
+                aria-label="Предыдущий"
+              ></button>
+            </div>
+
+            <div class="calc-form__cost">
+              <span>
+                Стоимость <br />
+                выдачи гарантии:
+              </span>
+              <span class="price">- --- ---</span>
+            </div>
+
+            <p class="calc-form__text">
+              Приведенные расчёты стоимости банковской гарантии и дохода от
+              сделки являются предварительными и не являются публичной офертой.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-bottom">
+          <div class="form-bottom__inner">
+            <div class="form-bottom__title">Ваш доход от сделки составит:</div>
+
+            <div class="range-slider range-slider--guarantees">
+              <div class="range-slider__top">
+                <input class="range-slider__value" type="text" value="2790" />
+                <span>И это ещё не предел!</span>
+              </div>
+
+              <div class="range-slider__range" id="slider-handles"></div>
+
+              <span class="range-slider__text">
+                Переместите бегунок для получения необходимой суммы дохода
+              </span>
+            </div>
+          </div>
+
+          <button class="form-bottom__btn btn" type="submit">
+            ОТПРАВИТЬ ЗАЯВКУ
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="calc__content calc-tab-content">
+      <form class="calc-form">
+        <div class="calc-form__inner">
+          <div class="calc-form__left">
+            <div class="calc-form__title">Информация о контракте:</div>
+
+            <div class="calc-form__btns">
+              <label class="checkbox-btn">
+                <input
+                  class="checkbox-btn__input"
+                  type="radio"
+                  name="contract-info"
+                  checked
+                />
+                <span class="checkbox-btn__text">44-ФЗ</span>
+              </label>
+              <label class="checkbox-btn">
+                <input
+                  class="checkbox-btn__input"
+                  type="radio"
+                  name="contract-info"
+                />
+                <span class="checkbox-btn__text">223-ФЗ</span>
+              </label>
+              <label class="checkbox-btn">
+                <input
+                  class="checkbox-btn__input"
+                  type="radio"
+                  name="contract-info"
+                />
+                <span class="checkbox-btn__text">615-П</span>
+              </label>
+              <label class="checkbox-btn">
+                <input
+                  class="checkbox-btn__input"
+                  type="radio"
+                  name="contract-info"
+                />
+                <span class="checkbox-btn__text">ПРОЧЕЕ</span>
+              </label>
+            </div>
+
+            <select class="calc-form__select select">
+              <option>Цель гарантии</option>
+              <option value="1">Участие в конкурсе</option>
+              <option value="2">Исполнение контракта</option>
+              <option value="3">Гарантийний период аванса</option>
+            </select>
+
+            <label class="calc-form__group">
+              <input
+                class="calc-form__input"
+                type="number"
+                placeholder="Сумма гарантии"
+                required
+              />
+            </label>
+
+            <div class="calc-form__title mt-35">Срок гарантии:</div>
+
+            <div class="calc-form__date">
+              <label class="calc-form__group">
+                <input
+                  class="calc-form__input"
+                  type="number"
+                  placeholder="В днях"
+                />
+              </label>
+              <span>или</span>
+              <label class="calc-form__group">
+                <input
+                  class="calc-form__input input-date"
+                  type="text"
+                  placeholder="дд/мм/гггг"
+                />
+              </label>
+              <span>—</span>
+              <label class="calc-form__group">
+                <input
+                  class="calc-form__input input-date"
+                  type="text"
+                  placeholder="дд/мм/гггг"
+                />
+              </label>
+            </div>
+
+            <button class="calc-form__btn btn calc-income" type="button">
+              РАССЧИТАТЬ ДОХОД ОТ СДЕЛКИ
+            </button>
+          </div>
+          <div class="calc-form__right">
+            <div class="calc-form__slider swiper">
+              <ul class="calc-form__slides swiper-wrapper">
+                <li class="calc-form__slide swiper-slide">
+                  <img src="img/calc-imgs/default.png" alt="img" />
+                </li>
+                <li class="calc-form__slide swiper-slide">
+                  <img src="img/calc-imgs/loans/1.png" alt="img" />
+                </li>
+                <li class="calc-form__slide swiper-slide">
+                  <img src="img/calc-imgs/loans/2.png" alt="img" />
+                </li>
+                <li class="calc-form__slide swiper-slide">
+                  <img src="img/calc-imgs/loans/3.png" alt="img" />
+                </li>
+                <li class="calc-form__slide swiper-slide">
+                  <img src="img/calc-imgs/loans/4.png" alt="img" />
+                </li>
+              </ul>
+
+              <button
+                class="swiper-button-next"
+                type="button"
+                aria-label="Следующий"
+              ></button>
+              <button
+                class="swiper-button-prev"
+                type="button"
+                aria-label="Предыдущий"
+              ></button>
+            </div>
+
+            <div class="calc-form__cost">
+              <span>
+                Стоимость <br />
+                выдачи гарантии:
+              </span>
+              <span class="price">- --- ---</span>
+            </div>
+
+            <p class="calc-form__text">
+              Приведенные расчёты стоимости банковской гарантии и дохода от
+              сделки являются предварительными и не являются публичной офертой.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-bottom">
+          <div class="form-bottom__inner">
+            <div class="form-bottom__title">Ваш доход от сделки составит:</div>
+
+            <div class="range-slider range-slider--loans">
+              <div class="range-slider__top">
+                <input class="range-slider__value" type="text" value="2790" />
+                <span>И это ещё не предел!</span>
+              </div>
+
+              <div class="range-slider__range" id="slider-handles"></div>
+
+              <span class="range-slider__text">
+                Переместите бегунок для получения необходимой суммы дохода
+              </span>
+            </div>
+          </div>
+
+          <button class="form-bottom__btn btn" type="submit">
+            ОТПРАВИТЬ ЗАЯВКУ
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
