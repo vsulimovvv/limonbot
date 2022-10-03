@@ -655,14 +655,10 @@ body.no-scroll {
 .checkbox {
   position: relative;
   width: 100%;
-  height: 100%;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .checkbox__box {
   display: inline-block;
@@ -674,6 +670,7 @@ body.no-scroll {
   margin-right: 13px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  margin-top: 5px;
 }
 .checkbox__input {
   position: absolute;
@@ -683,13 +680,15 @@ body.no-scroll {
   margin: -1px;
 }
 .checkbox__input:checked + .checkbox__box {
-  border-color: var(--color-accent);
+  border-color: transparent;
 }
 .checkbox__input:checked + .checkbox__box::after {
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   background-image: url("../img/check.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -737,6 +736,7 @@ body.no-scroll {
   color: #0e0e0e;
   background-color: #fff0b8;
   border-radius: 5px;
+  font-family: "TT Commons";
 }
 
 .choices {
@@ -1858,6 +1858,11 @@ body.no-scroll {
       );
   }
 }
+.steps .step-item__name .icon {
+  display: inline-block;
+  height: 30px;
+  width: 130px;
+}
 .steps .step-item__img {
   -o-object-fit: contain;
      object-fit: contain;
@@ -1874,6 +1879,10 @@ body.no-scroll {
 .steps .step-item__text {
   font-size: 15px;
   line-height: 1.8;
+}
+.steps .step-item__text .icon {
+  width: 95px;
+  height: 20px;
 }
 .steps .step-item__text p:not(:last-child) {
   margin-bottom: 15px;
@@ -2019,6 +2028,10 @@ body.no-scroll {
       );
   }
 }
+.contract .contract-docs__name .icon {
+  width: 120px;
+  height: 25px;
+}
 .contract .contract-docs__item {
   padding-left: 30px;
   position: relative;
@@ -2130,14 +2143,6 @@ body.no-scroll {
     gap: 10px;
   }
 }
-.form-submit__groups {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  width: 100%;
-}
 .form-submit__left {
   padding-top: 65px;
   display: -webkit-box;
@@ -2151,6 +2156,9 @@ body.no-scroll {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+.form-submit__left .form-submit__group:not(:last-child) {
+  margin-bottom: 20px;
+}
 @media (max-width: 767.98px) {
   .form-submit__left {
     padding-top: 0;
@@ -2160,8 +2168,8 @@ body.no-scroll {
   width: 100%;
   display: block;
 }
-.form-submit__group:not(:last-child) {
-  margin-bottom: 20px;
+.form-submit__group.mb-0 {
+  margin-bottom: 0 !important;
 }
 .form-submit__input {
   display: block;
@@ -2204,13 +2212,24 @@ body.no-scroll {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+.form-submit__right .form-submit__group:not(:last-child) {
+  margin-bottom: 20px;
+}
+.form-submit__groups {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
 .form-submit__accept {
   width: 100%;
   margin-top: auto;
 }
 .form-submit__block {
   width: 100%;
-  margin-top: auto;
+  margin-top: 40px;
 }
 @media (max-width: 767.98px) {
   .form-submit__block {
@@ -2218,8 +2237,7 @@ body.no-scroll {
   }
 }
 .form-submit .checkbox {
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: auto 0;
 }
 .form-submit__content {
   display: none;
