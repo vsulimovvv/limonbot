@@ -1088,11 +1088,20 @@ body.no-scroll {
   background-color: #f6f6f6;
   font-size: 14px;
   line-height: 2;
-  padding-top: 55px;
+  background-image: url("../img/footer-bg.png");
   padding-bottom: 55px;
+  padding-top: 55px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+@media (max-width: 1100px) {
+  .footer {
+    padding-bottom: calc(
+        30px + 25 *
+          ((100vw - 360px) / 740)
+      );
+  }
 }
 @media (max-width: 1100px) {
   .footer {
@@ -1102,13 +1111,22 @@ body.no-scroll {
       );
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 991.98px) {
   .footer {
-    padding-bottom: calc(
-        30px + 25 *
-          ((100vw - 360px) / 740)
-      );
+    background-image: none;
   }
+}
+.footer__bottom {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .footer__wrapper {
   display: -ms-grid;
@@ -1242,6 +1260,48 @@ body.no-scroll {
 .footer__link:hover {
   color: var(--color-dark);
   border-bottom-color: var(--color-dark);
+}
+
+.company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #95959a;
+  font-size: 13px;
+}
+@media (max-width: 767.98px) {
+  .company {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .company img {
+    width: 140px;
+  }
+}
+@media (max-width: 359.98px) {
+  .company {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .company img {
+    width: 140px;
+  }
 }
 
 .header {
@@ -1458,6 +1518,7 @@ body.no-scroll {
   }
 }
 .hero__text {
+  font-weight: 500;
   margin-bottom: 50px;
 }
 @media (max-width: 1100px) {
