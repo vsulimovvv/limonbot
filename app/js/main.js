@@ -7,6 +7,16 @@ window.addEventListener('DOMContentLoaded', () => {
   $('select').niceSelect();
   // $('select').niceSelect();
 
+  tippy('.form-submit__tooltip', {
+    content: `
+      <b>Как узнать ваш ID:</b> <br />
+      1. Подключитесь к Боту - см. Шаг №1 на странице сайта «Как это
+      работает»<br />
+      2. В стартовом сообщении Бот сообщит вам ID <br />
+    `,
+    allowHTML: true,
+  });
+
   // * ===== Slider
   (function slider() {
     const sliderEl = document.querySelectorAll('.calc-form__slider');
@@ -164,7 +174,7 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     }
   })();
-  
+
   // * ===== Range Slider
   (function handlesSlider() {
     const parent = document.querySelector('.range-slider--loans');
