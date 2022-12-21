@@ -17,6 +17,24 @@ window.addEventListener('DOMContentLoaded', () => {
     allowHTML: true,
   });
 
+  (function scrolAnchor() {
+    $('.anchor').on('click', function () {
+      let href = $(this).attr('href');
+
+      $('html, body').animate(
+        {
+          scrollTop: $(href).offset().top,
+        },
+        {
+          duration: 1000, 
+          easing: 'linear', 
+        }
+      );
+
+      return false;
+    });
+  })();
+
   // * ===== Slider
   (function slider() {
     const sliderEl = document.querySelectorAll('.calc-form__slider');

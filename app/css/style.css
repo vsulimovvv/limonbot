@@ -71,10 +71,6 @@ cite {
   font-style: normal;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 button {
   padding: 0;
   border: none;
